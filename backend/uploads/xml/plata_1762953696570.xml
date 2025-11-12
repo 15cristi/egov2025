@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plata>
+  <email>traiancalcan@gmail.com</email>
+  <telefon>0737176579</telefon>
+  <inmatriculare>OT15CTM</inmatriculare>
+  <durata>1</durata>
+  <suma>5.00</suma>
+  <tva>0.95</tva>
+  <total>4.46</total>
+  <reducere>25</reducere>
+  <codReducere>STUDENT</codReducere>
+</plata>

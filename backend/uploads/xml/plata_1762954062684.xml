@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plata>
+  <email>cristi21cristi2124@gmail.com</email>
+  <telefon>0737176579</telefon>
+  <inmatriculare>OT15CTM</inmatriculare>
+  <durata>24</durata>
+  <suma>50.00</suma>
+  <tva>9.50</tva>
+  <total>44.63</total>
+  <reducere>25</reducere>
+  <codReducere>STUDENT</codReducere>
+</plata>
