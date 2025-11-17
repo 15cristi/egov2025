@@ -202,9 +202,7 @@ public class FormController {
         ));
     }
 
-    // =========================================================
-    // ✅ TEMA 2: ENDPOINT DE RAPORTARE ȘI ANALIZĂ (LAB 2)
-    // =========================================================
+
     @GetMapping("/raport/analiza")
     public ResponseEntity<InputStreamResource> generateReport() {
 
@@ -255,7 +253,7 @@ public class FormController {
 
 
             // TITLU
-            Paragraph titlu = new Paragraph("RAPORT DE ANALIZĂ STATISTICĂ: PLĂȚI PARCARE (LAB 2)", titluFont);
+            Paragraph titlu = new Paragraph("RAPORT DE ANALIZĂ STATISTICĂ: PLĂTI PARCARE", titluFont);
             titlu.setAlignment(Element.ALIGN_CENTER);
             titlu.setSpacingAfter(30);
             document.add(titlu);
@@ -284,7 +282,7 @@ public class FormController {
             // ==========================================================
             // DIAGRAMA CU BARE (BAR CHART) PENTRU DURATĂ - SUB ANALIZĂ 1
             // ==========================================================
-            Paragraph graficTitlu1 = new Paragraph("REPREZENTARE GRAFICĂ Durata", sectiuneFont);
+            Paragraph graficTitlu1 = new Paragraph("REPREZENTARE GRAFICĂ DURATA", sectiuneFont);
             graficTitlu1.setSpacingAfter(10);
             document.add(graficTitlu1);
 
@@ -435,21 +433,6 @@ public class FormController {
             document.add(linie);
             document.add(new Paragraph("\n"));
 
-
-            // SECȚIUNEA DE CONCLUZII (MUTATĂ LA FINAL)
-            Paragraph cerintaGrafice = new Paragraph("CONCLUZII GENERALE", sectiuneFont);
-            cerintaGrafice.setSpacingAfter(10);
-            document.add(cerintaGrafice);
-
-            Paragraph graficText = new Paragraph(
-                    "Raportul include acum două vizualizări grafice, realizate prin desenare manuală, pentru a ilustra cele două analize principale cerute de Tema 2:", textNormal);
-            graficText.setSpacingAfter(10);
-            document.add(graficText);
-
-            com.itextpdf.text.List list = new com.itextpdf.text.List(true, 15);
-            list.add(new ListItem("Diagrama cu Bare (Bar Chart) - Vizualizează ponderea plătilor de 24h vs. restul duratelor.", textNormal));
-            list.add(new ListItem("Diagrama cu Bare (Bar Chart) - Compară vizual numărul de plăti cu și fără reducere.", textNormal));
-            document.add(list);
 
             document.add(new Paragraph("\n"));
             document.add(linie);
