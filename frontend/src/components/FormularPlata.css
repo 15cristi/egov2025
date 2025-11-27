@@ -15,7 +15,7 @@
   --transition-base: all 0.3s ease;
 }
 
-/* Folosim variabilele din styles.css */
+
 .form-wrapper {
   display: flex;
   justify-content: center;
@@ -87,14 +87,14 @@
   box-shadow: 0 0 10px rgba(217,164,65,0.4);
 }
 
-/* ✅ Stil pentru opțiunile din dropdown */
+
 .select-field option {
-  background-color: #1e1e1e; /* fundal închis */
-  color: var(--text-primary); /* text alb */
+  background-color: #1e1e1e; 
+  color: var(--text-primary); 
   padding: 10px;
 }
 
-/* Hover / selected în dropdown */
+
 .select-field option:checked,
 .select-field option:hover {
   background-color: var(--gold-primary);
@@ -143,7 +143,7 @@
   margin-top: 18px;
 }
 
-/* animație fade */
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
