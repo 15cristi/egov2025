@@ -45,7 +45,7 @@ public class FormController {
         String inmatriculare = (String) payload.get("inmatriculare");
         int durata = Integer.parseInt(payload.get("durata").toString());
 
-        // prețuri pentru durate diferite
+        
         var preturi = Map.of(1, 5.0, 2, 10.0, 5, 20.0, 24, 50.0);
         double suma = preturi.getOrDefault(durata, 0.0);
         double tva = suma * 0.19;
@@ -113,7 +113,7 @@ public class FormController {
         pdf.open();
 
     
-        Font titlu = new Font(Font.FontFamily.HELVETICA, 20, Font.BOLD, new BaseColor(218, 165, 32)); // gold
+        Font titlu = new Font(Font.FontFamily.HELVETICA, 20, Font.BOLD, new BaseColor(218, 165, 32)); 
         Font subtitlu = new Font(Font.FontFamily.HELVETICA, 14, Font.BOLD, BaseColor.BLACK);
         Font textNormal = new Font(Font.FontFamily.HELVETICA, 12, Font.NORMAL, BaseColor.DARK_GRAY);
         Font bold = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD, BaseColor.BLACK);
@@ -194,7 +194,7 @@ public class FormController {
             ));
         }
 
-        // Dacă este valid
+        
         return ResponseEntity.ok(Map.of(
                 "valid", true,
                 "procent", cupon.getProcent(),
@@ -235,7 +235,7 @@ public class FormController {
         
         PdfWriter writer = null;
         try (ByteArrayOutputStream out = new ByteArrayOutputStream()) {
-            Document document = new Document(PageSize.A4.rotate(), 30, 30, 30, 30); // A4 Landscape
+            Document document = new Document(PageSize.A4.rotate(), 30, 30, 30, 30);
             writer = PdfWriter.getInstance(document, out);
             document.open();
 
