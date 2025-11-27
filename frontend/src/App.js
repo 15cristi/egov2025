@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FormularPlata from './components/FormularPlata';
-// ✅ Importul folosește calea RaportAnaliza, care se potrivește cu fișierul RaportAnaliza.jsx
+
 import RaportAnaliza from './components/RaportAnaliza'; 
 
 function App() {
