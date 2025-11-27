@@ -24,5 +24,5 @@ public class Plata {
 
     @Lob
     @Column(columnDefinition = "TEXT")
-    private String xmlContent; // 🧾 conținutul XML salvat în DB
+    private String xmlContent;
 }
