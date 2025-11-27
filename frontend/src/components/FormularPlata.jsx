@@ -68,7 +68,7 @@ const handleAplicareReducere = () => {
       setMesajReducere(raspuns.mesaj);
     }
 
-    // recalculăm totalul curent
+    
     if (form.durata) {
       const rezultat = calculeazaCosturi(Number(form.durata), raspuns.procent);
       setCosturi(rezultat);
@@ -106,20 +106,20 @@ useEffect(() => {
   }
 
   try {
-    // 🔁 construim payload complet cu toate datele
+   
     const payload = {
       ...form,
       suma: parseFloat(costuri.suma),
       tva: parseFloat(costuri.tva),
       total: parseFloat(costuri.total),
       reducere: reducere,
-      codReducere: cod.trim().toUpperCase(), // ✅ adăugăm codul folosit
+      codReducere: cod.trim().toUpperCase(), 
     };
 
-    // trimitem către server
+    
     const pdfBlob = await trimitePlata(payload);
 
-    // descarcăm PDF-ul generat
+    
     saveAs(pdfBlob, "ordin_plata.pdf");
 
     alert("✅ Plata a fost înregistrată cu succes!");
